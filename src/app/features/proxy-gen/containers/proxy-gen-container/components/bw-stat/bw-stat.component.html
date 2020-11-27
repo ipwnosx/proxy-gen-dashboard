@@ -1,0 +1,14 @@
+<div class="bw-stat-con card-blue shadow d-flex flex-column justify-content-center align-items-center">
+    <div class="bw-stat-title">{{ title }}</div>
+
+    <div *ngIf="mb != undefined; else loading" class="bw-stat-mb">{{ mb }} 
+        <span class="mb-span">Mb</span>
+    </div>
+
+    <ng-template #loading>
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </ng-template>
+
+</div>

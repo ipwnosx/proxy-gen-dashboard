@@ -1,0 +1,5 @@
+<app-bw-meter></app-bw-meter>
+
+<app-bw-stat [mb]="bwRemaining$ | async" [title]="'Mb Remaining'"></app-bw-stat>
+
+<app-bw-stat [mb]="bwUsed$ | async" [title]="'Mb Used'"></app-bw-stat>

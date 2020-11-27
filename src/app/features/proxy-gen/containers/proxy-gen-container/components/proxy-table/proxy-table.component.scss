@@ -1,0 +1,26 @@
+.proxy-table-inner-container {
+    // this should be set to whatever the min height of the proxy-table component is
+    // in the proxy-gen container css
+    min-height: 550px;
+}
+
+table {
+    color: white;
+
+    th, td {
+        border-color: rgba(26, 70, 123, 0.81);
+    }
+
+    td {
+        color: #cdcdcd;
+    }
+}
+
+.proxy-table-pagination-con {
+    border-top: solid 1px rgba(26, 70, 123, 0.81);
+}
+
+.custom-select {
+    background-color: #161B31;
+    color: white;
+}

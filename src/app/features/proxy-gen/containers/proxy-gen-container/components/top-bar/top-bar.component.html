@@ -1,0 +1,43 @@
+<div class="card-blue shadow form-row d-flex justify-content-between">
+
+    <div class="proxy-gen-inputs-left d-flex flex-row align-items-end" [formGroup]="formGroup">
+
+        <div class="form-group p-2 package-fg">
+            <label for="inputState">Package</label>
+            <select id="inputState" class="form-control" formControlName="package">
+                <option *ngFor="let package of packages$ | async" [ngValue]="package">{{ package.name }}</option>
+            </select>
+        </div>
+
+        <div class="form-group p-2 country-fg">
+            <label for="inputState">Region</label>
+            <select id="inputState" class="form-control" formControlName="regionLongname">
+                <option *ngFor="let longname of regionLongnames$ | async" [ngValue]="longname">{{ longname }}</option>
+            </select>
+        </div>
+
+        <div class="form-group p-2">
+            <label for="inputState">Type</label>
+            <select id="inputState" class="form-control" formControlName="type">
+                <option value="static" selected>Static</option>
+                <option value="rotating">Rotating</option>
+            </select>
+        </div>
+
+        <div class="form-group p-2">
+            <label>Quantity</label>
+            <input type="number" class="form-control" placeholder="Quantity" formControlName="quantity">
+        </div>
+
+        <div class="p-2">
+            <button type="button" class="btn btn-primary" (click)="genProxies()">Generate</button>
+        </div>
+        
+
+    </div>
+
+    <div class="proxy-gen-inputs-right d-flex flex-row align-items-end p-2">
+        <button type="button" class="btn btn-primary" (click)="copyToClipboard()">Copy To Clipboard</button>
+    </div>
+    
+</div>

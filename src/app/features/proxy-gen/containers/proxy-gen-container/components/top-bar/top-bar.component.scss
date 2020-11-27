@@ -1,0 +1,26 @@
+.form-row {
+    margin: 0px 20px 0px 20px; 
+    padding: 12px;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] {
+    width: 90px;
+}
+
+.country-fg {
+    min-width: 204px;
+}
+
+.package-fg {
+    min-width: 135px;
+}

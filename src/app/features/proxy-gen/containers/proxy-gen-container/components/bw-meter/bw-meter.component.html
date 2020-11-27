@@ -1,0 +1,17 @@
+<div #progressCircle id="progress-circle" class="card-blue shadow">
+    <div *ngIf="bandwidthUsed != undefined; else loading" class="pnp-circle-inner-stats">
+        {{ bandwidthUsed }}
+        <span class="mb-span">Mb</span>
+        /
+        {{ bandwidthAllotted }}
+        <span class="mb-span">Mb</span>
+    </div>
+
+    <ng-template #loading>
+        <div class="pnp-circle-inner-stats">
+            <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </ng-template>
+</div>

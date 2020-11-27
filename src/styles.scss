@@ -1,0 +1,100 @@
+
+@import "~bootstrap/scss/bootstrap";
+
+$bgColor: #161B31;
+$borderColor: rgba(26, 70, 123, 0.81);
+
+body {
+    background-color: #161B31;
+    color: white;
+}
+
+.flex1 {
+    flex: 1;
+}
+
+.card-blue {
+    background-color:#222B45;
+}
+
+.btn-primary {
+    background-color: #2e5fcb !important;
+    border-color: #2e5fcb !important;
+}
+/* get rid of outline when button is clicked */
+.btn-primary:focus {
+    box-shadow: unset !important;
+}
+
+.spinner-border {
+    border: 3px solid #09a7ef;
+    border-right-color: transparent;
+}
+
+// fix select dropdown arrows on firefox
+@-moz-document url-prefix() {
+  select.form-control {
+    padding-right: 25px;
+    background-image: url("data:image/svg+xml,\
+      <svg version='1.1' xmlns='http://www.w3.org/2000/svg' width='14px'\
+           height='14px' viewBox='0 0 1200 1000' fill='rgb(255,255,255)'>\
+        <path d='M1100 411l-198 -199l-353 353l-353 -353l-197 199l551 551z'/>\
+      </svg>");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 7px) 50%;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
+
+
+// added a lot of !importants below to prevent wordpress theme from overwriting them
+
+/* INPUTS */
+.form-control {
+    background-color: $bgColor !important;
+    color: white !important;
+    font-size: 16px !important;
+}
+.form-control:focus {
+  background-color : $bgColor !important; 
+  color: white !important; 
+}
+/* END INPUTS */
+
+/* FOR PAGINATION */
+.pagination {
+    margin: 0 !important; 
+}
+.page-link {
+    color: white !important; 
+    background-color: $bgColor !important; 
+    border-color: $borderColor !important; 
+}
+.page-link:hover {
+    background-color: #a0a0a0 !important; 
+    color: white !important; 
+}
+.page-item.disabled {
+    color: white !important; 
+    background-color: $bgColor !important; 
+    border-color: $borderColor !important; 
+}
+.page-item.disabled .page-link {
+    color: white !important; 
+    background-color: $bgColor !important; 
+    border-color: $borderColor !important; 
+}
+.page-item.active .page-link {
+    background-color: #20466f !important; 
+}
+
+/* END PAGINATION */
+
+
+// for text that says Mb
+// just put it here so we don't have to repeat it
+// in multiple components
+.mb-span {
+    font-size: 14px;
+}

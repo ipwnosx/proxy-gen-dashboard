@@ -1,0 +1,31 @@
+<div class="card-blue d-flex flex-column justify-content-between proxy-table-inner-container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Proxy</th>
+                <th scope="col">Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let proxy of dataSource.data$ | async">
+                <td scope="row">{{ proxy.id }}</td>
+                <td>{{ proxy.details}}</td>
+                <td>{{ proxy.regionLongname }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="proxy-table-pagination-con d-flex justify-content-between p-3">
+        <ngb-pagination [collectionSize]="dataSource.collectionSize" [(page)]="dataSource.page"
+            [pageSize]="dataSource.pageSize" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true">
+        </ngb-pagination>
+
+        <select class="custom-select" style="width: auto" [(ngModel)]="dataSource.pageSize">
+            <option [ngValue]="5">5 items per page</option>
+            <option [ngValue]="10">10 items per page</option>
+            <option [ngValue]="20">20 items per page</option>
+            <option [ngValue]="100">100 items per page</option>
+        </select>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+{
+  "name": "proxy_gen",
+  "collaborators": [
+    "Paul Hendricks <paul@digitalhurricane.io>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "proxy_gen_bg.wasm",
+    "proxy_gen.js",
+    "proxy_gen.d.ts"
+  ],
+  "module": "proxy_gen.js",
+  "types": "proxy_gen.d.ts",
+  "sideEffects": false
+}

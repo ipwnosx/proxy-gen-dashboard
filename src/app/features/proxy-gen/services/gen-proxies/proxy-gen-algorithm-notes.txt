@@ -1,0 +1,38 @@
+Algorithm for proxy location optimization:
+
+
+Optimization MUST be done on the client since by the time we get to the server,
+  the server has already been selected...
+
+----------
+
+Example package combo:
+[Luminati static, Luminati Residential, Smartproxy Datacenter]
+
+Example server list:
+{
+  s1: optimized for Luminati,
+  s2: optimized for Luminati,
+  s3: optimized for smartproxy,
+  s4: optimized for smartproxy
+}
+
+
+Example number of proxies to generate: 30
+
+Algorithm:
+
+1.) Spread proxies evenly across providers. In this example case, 10 proxies would be generated for each provider.
+So we have something like this:
+{
+  Luminati Static: 10,
+  Luminati Residential: 10,
+  Smartproxy Datacenter: 10
+}
+
+2.) Loop through the proxy list, the one that we made in step 1. 
+      Generate proxies for each provider, spreading them out evenly among servers that are optimized for that provider.
+      If there are no servers optimized for that provider, spread them out evenly among all servers.
+
+
+
